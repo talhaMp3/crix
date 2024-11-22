@@ -38,6 +38,20 @@
             font-size: 2.5rem;
             text-align: center;
         }
+        .main-header h3 {
+            color: white;
+            font-weight: 700;
+            margin: 0;
+
+            text-align: center;
+        }
+        .main-header h5 {
+            color: white;
+            font-weight: 700;
+            margin: 0;
+
+            text-align: center;
+        }
 
         .registration-card {
             background: white;
@@ -87,31 +101,6 @@
             border-color: var(--secondary-color);
             box-shadow: 0 0 0 0.25rem rgba(229, 183, 0, 0.25);
         }
-
-        /* .skill-card {
-            background: white;
-            border: 2px solid #E2E8F0;
-            border-radius: var(--border-radius);
-            padding: 1rem;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .skill-card:hover {
-            border-color: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-
-        .skill-card.selected {
-            border-color: var(--secondary-color);
-            background: rgba(229, 183, 0, 0.1);
-        }
-
-        .skill-card i {
-            color: var(--primary-color);
-            margin-right: 0.5rem;
-        } */
 
         .progress {
             height: 0.8rem;
@@ -204,7 +193,6 @@
         .skill-card {
             position: relative;
             padding-right: 30px;
-            /* Make room for the indicator */
         }
 
         .selected-indicator {
@@ -231,23 +219,51 @@
         <div class="container">
             <h1>
                 <i class="fas fa-trophy"></i>
-                VYARA BIG BASH DHAMAKA 2024
+               WARD NO-2 PREMIER LEAGUE 
             </h1>
+        
+            <h3>
+                SEASON-1 
+            </h3>
+           <h5>
+            Vyara Word No-2 Booth No. 63,64,65,66,67
+           </h5>
         </div>
     </header>
 
+
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-4">
+                <div class="qr-section mb-4">
+                    <h5>
+                        <i class="fas fa-qrcode me-2"></i>
+                         Scan to Pay
+                    </h5>
+                    <img src="{{asset('image/qr.jpg')}}" alt="Payment QR Code" class="img-fluid mb-3">
+                    <hr>
+                    <div class="col-12 mt-1">
+                        <a href="upi://pay?pa=khedvan0076@ibl&am=100.00&cu=INR" class="btn-register w-100 mt-2 btn "> Click to Pay</a>
+                    </div>
+                    <div class="alert alert-info mb-0 mt-3">
+                        <small>
+                            <i class="fas fa-info-circle me-1"></i>
+                            Please save the payment screenshot for Transaction ID
+                        </small>
+                    </div>
+                </div>
+                <div class="sponsors-section">
+                    {{-- <h5>Official Sponsors</h5> --}}
+                    <img src="{{asset('image/ad.jpg')}}" alt="Sponsors" class="img-fluid">
+                </div>
+            </div>
+                  <div class="col-md-8">
                 <div class="registration-card">
                     <h4 class="section-title">Player Registration</h4>
-
                     <div class="alert alert-info">
                         <i class="fas fa-info-circle"></i>
                         Please fill all required fields marked with an asterisk (*).
                     </div>
-
-                    @dump(Session()->all())
                     <form id="registrationForm" method="POST" accept="{{ route('registration.store') }}"
                         enctype="multipart/form-data">
                         @csrf
@@ -361,32 +377,11 @@
                     </form>
                 </div>
             </div>
-
-            <div class="col-md-4">
-                <div class="qr-section mb-4">
-                    <h5>
-                        <i class="fas fa-qrcode me-2"></i>
-                        Scan to Pay
-                    </h5>
-                    <img src="https://via.placeholder.com/200" alt="Payment QR Code" class="img-fluid mb-3">
-                    <div class="alert alert-info mb-0">
-                        <small>
-                            <i class="fas fa-info-circle me-1"></i>
-                            Please save the payment screenshot
-                        </small>
-                    </div>
-                </div>
-
-                <div class="sponsors-section">
-                    <h5>Official Sponsors</h5>
-                    <img src="blob:https://web.whatsapp.com/60912739-e826-4d17-b26d-9f5002009599" alt="Sponsors" class="img-fluid">
-                </div>
-            </div>
         </div>
 
         <div class="footer-banner">
             <i class="fas fa-calendar-alt me-2"></i>
-            Tournament Dates: 27th Nov to 1st Dec, 2024
+            Tournament Dates: 12th Dec to 15th Dec, 2024
         </div>
     </div>
 

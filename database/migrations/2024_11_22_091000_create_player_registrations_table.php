@@ -18,7 +18,8 @@ return new class extends Migration
             $table->text('address');
             $table->string('player_photo');
             $table->enum('tshirt_size', ['S', 'M', 'L', 'XL', 'other']);
-            $table->string('custom_tshirt_size')->nullable();
+            $table->string('performance')->nullable();
+            $table->string('payment_status')->nullable();
             $table->enum('cricket_skill', [
                 'Left Hand Batsman',
                 'Right Hand Batsman',

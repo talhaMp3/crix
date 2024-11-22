@@ -26,7 +26,7 @@
             <div class="col-md-8">
                 <div class="card shadow-sm">
                     <div class="card-body text-center">
-                        <img src="https://via.placeholder.com/150" alt="Tournament Logo" class="tournament-logo">
+           
                         <h1 class="card-title mb-4">Payment Successful!</h1>
                         <div class="success-checkmark mb-4">
                             <i class="fas fa-check-circle"></i>
@@ -37,12 +37,7 @@
                             <i class="fas fa-phone-alt me-2"></i>
                             <strong>Important:</strong> We will confirm your payment within 24 hours and give you a call to verify your details. Please ensure your contact information is up to date.
                         </div>
-                        <div class="alert alert-info mt-4">
-                            <h5><i class="fas fa-info-circle me-2"></i>Registration Details</h5>
-                            <p class="mb-0">Registration ID: <strong>#VBD2024-001</strong></p>
-                            <p class="mb-0">Amount Paid: <strong>₹500</strong></p>
-                            <p class="mb-0">Transaction Date: <strong id="transactionDate"></strong></p>
-                        </div>
+                
                 
                         <a href="{{route('user.home')}}" class="btn btn-primary mt-4">
                             <i class="fas fa-home me-2"></i>Return to Homepage

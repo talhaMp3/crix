@@ -18,13 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('user.home');
 
-// Player Registration Routes
-// Route::prefix('registration')->group(function () {
-    // Route::get('/', [PlayerRegistrationsController::class, 'create'])->name('registration.create');
-    Route::post('/', [PlayerRegistrationsController::class, 'store'])->name('registration.store');
-    Route::get('/success', [PlayerRegistrationsController::class, 'success'])->name('registration.success');
-// });
 
-// Route::post('/', function () {
-//     return dd('done');
-// })->name('registration.store');
+Route::post('/', [PlayerRegistrationsController::class, 'store'])->name('registration.store');
+Route::get('/success', [PlayerRegistrationsController::class, 'success'])->name('registration.success');
+Route::post('/update-payment-status', [PlayerRegistrationsController::class, 'updatePaymentStatus'])->name('registration.updatePaymentStatus');
+Route::post('/delete-record', [PlayerRegistrationsController::class, 'destroy'])->name('registration.delete');
+
+Route::get('/export', [PlayerRegistrationsController::class, 'export'])->name('registration.export');
